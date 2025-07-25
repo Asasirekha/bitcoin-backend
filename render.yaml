@@ -2,9 +2,8 @@ services:
   - type: web
     name: bitcoin-backend
     env: python
-    region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: gunicorn app:app
     envVars:
-      - key: PORT
-        value: 10000
+      - key: FLASK_ENV
+        value: production
