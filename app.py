@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://bitcoin-frontend-1bxbtket3-adapa-sasi-rekhas-projects.vercel.app/"])
 
 @app.route('/')
 def home():
